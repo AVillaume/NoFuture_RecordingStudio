@@ -1,0 +1,462 @@
+$pink: rgb(214, 136, 240);
+$blue: rgb(38, 163, 204);
+$purple: rgb(157, 43, 180);
+$anthra: rgb(36, 36, 36);
+$lightpink: rgb(252, 184, 243);
+
+html, body {
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+
+body {
+    max-width: 1750px;
+    margin: auto;
+}
+
+a{ text-decoration: none; color: inherit;}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+
+    color: #000;
+
+    background-color: #FFF;
+    &__logo img {
+        width: 450px;
+        height: 150px;
+        margin-left: 80px;
+    }
+
+    &__menu {
+        display: none;
+    }
+}
+
+.menu {
+    margin-right: 10px;
+    a{
+        padding: 0px 50px;
+        font-size: 1.4em;
+        transition: all 0.5s ease-in-out;
+    }
+    a:hover {
+        color: $purple;
+        
+        text-decoration: underline;
+        text-underline-position: under;
+        text-shadow: 1px 1px 2px $purple;
+    }
+    & i {
+        display: none;
+    }
+}
+
+.banner {
+    display: flex;
+    height: 600px;
+    margin: auto;
+    width: 98%;
+    box-shadow: 3px 8px 5px $anthra;
+    border-radius: 10px;
+    &__block {
+        background-color: $anthra;
+        width: 40%;
+        border-radius: 10px 0 0 10px;
+    }
+    & img {
+        width: 60%;
+        object-fit: cover;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.banner__title {
+    position: absolute;
+    padding: 20px 30px;
+    margin-left: 30px;
+    color: #FFF;
+    font-size: 2.2em;
+    text-shadow: 1px 1px 1px #000;
+    & p {
+        font-size: 0.8em;
+        padding-top: 50px;
+    }
+}
+
+h2.propos {
+    color: $blue;
+}
+.container__propos {
+    margin-top: 100px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    height: 460px;
+    box-shadow: 5px 5px 8px rgb(102, 180, 206);
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        display: flex;
+        justify-content: center;
+        margin-top: 70px;
+        margin-bottom: 35px;
+        font-size: 2.5em;
+        font-weight: 900;
+        color: $purple;
+        text-shadow: 1px 1px 0px black;
+    }
+    &__text {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        min-width: 300px;
+        max-width: 800px;
+        font-size: 1.4em;
+        margin: auto;
+        margin-bottom: 25px;
+    }
+    &__button {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-size: 2em;
+        border: 0;
+        line-height: 2.5;
+        padding: 0 60px;
+        text-align: center;
+        color: #fff;
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 10px;
+        background: linear-gradient($blue, $purple);
+        box-shadow: 2px 3px 3px black;
+    }
+}
+
+.container__image {
+    padding: 10px;
+}
+
+.container__image img {
+    display: flex;
+    width: 425px;
+    height: 440px;
+    object-fit: cover;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contact {
+    margin-top: 40px;
+}
+
+.container__align {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.container__network {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    box-shadow: -5px -5px 8px  rgba(157, 43, 180, 0.363);
+    padding: 2px;
+    border-radius: 10px;
+    padding-bottom: 50px;
+}
+.socialNet {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    &__circle {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+        box-shadow: 3px 3px 5px black;
+    }
+
+    & i {
+        position: relative;
+    }
+}
+
+.insta {
+    background-color: rgb(233, 233, 233);
+}
+
+.instaGram {
+    color: $purple;
+    top: 20px;
+    left: 27px;
+    font-size: 7em;
+
+}
+
+.snapchat {
+    background-color: rgb(207, 207, 35);
+}
+
+.snapChat {
+    color: white;
+    left: 36px;
+    top: -51px;
+    font-size: 5em;
+}
+
+.snapChat2 {
+    color:black;
+    left: 32px;
+    top: 32px;
+    font-size: 5.5em;
+}
+
+.facebook {
+    background-color:rgb(57, 99, 236);
+}
+
+.faceBook {
+    color: white;
+    top: 42px;
+    left: 75px;
+    font-size: 6em;
+}
+
+footer {
+    color: white;
+    font-size: 1.5em;
+}
+
+.blocFooter {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    height: 300px;
+    padding: 20px;
+}
+
+.right-sideFoot {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    & a {
+        margin-bottom: 20px;
+    }
+}
+
+.blocFooter img {
+    width: 400px;
+    height: 250px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px){
+    body {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .topbar__logo img {
+        width: 150px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    .menu {
+        & a {
+        display: none;
+        }
+        & i {
+        display: flex;
+        margin-right: 20px;
+        font-size: 2.5em;
+        }
+    }
+    .banner__title {
+        padding: 10px 15px;
+        margin-left: 10px;
+        color: #FFF;
+        font-size: 1.2em;
+        text-shadow: 1px 1px 1px #000;
+        & p {
+            font-size: 0.8em;
+            padding-top: 20px;
+        }
+    }
+    .banner {
+        display: flex;
+        height: 300px;
+        margin: auto;
+        width: 98%;
+        box-shadow: 3px 8px 5px $anthra;
+        border-radius: 10px;
+        background-color: $anthra;
+    }
+    .banner__image {
+        display: none;
+    }
+    .container__image {
+        display: none;
+    }
+}
+
+.container__propos {
+    margin-top: 50px;
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 330px;
+    box-shadow: 5px 5px 8px rgb(102, 180, 206);
+    border-radius: 10px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    &__title {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 2em;
+        font-weight: 900;
+        color: $purple;
+        text-shadow: 1px 1px 0px black;
+    }
+    &__text {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.8em;
+        margin-bottom: 15px;
+    }
+    &__button {
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        border: 0;
+        line-height: 2.5;
+        padding: 0 40px;
+
+    }
+}
+
+.container__align {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.container__network {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    box-shadow: -5px -5px 8px  rgba(157, 43, 180, 0.363);
+    padding: 2px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+.socialNet {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+
+    &__circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    & i {
+        position: relative;
+    }
+}
+
+.insta {
+    background-color: rgb(233, 233, 233);
+}
+
+.instaGram {
+    color: $purple;
+    top: 14px;
+    left: 15px;
+    font-size: 2.2em;
+
+}
+
+.snapchat {
+    background-color: rgb(207, 207, 35);
+}
+
+.snapChat {
+    color: white;
+    left: 16px;
+    top: -20px;
+    font-size: 2em;
+}
+
+.snapChat2 {
+    color:black;
+    left: 14px;
+    top: 14px;
+    font-size: 2.2em;
+}
+
+.facebook {
+    background-color:rgb(57, 99, 236);
+}
+
+.faceBook {
+    color: white;
+    top: 20px;
+    left: 30px;
+    font-size: 2em;
+}
+
+.blocFooter {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    width: 100%;
+    height: 170px;
+    padding: 10px;
+}
+
+.right-sideFoot {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    & a {
+        margin-bottom: 20px;
+    }
+}
+
+.blocFooter img {
+    display: none;
+}
+
+footer {
+    font-size: 0.8em;
+}
+
