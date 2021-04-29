@@ -355,11 +355,11 @@ footer {
     padding: 10px 15px;
     margin-left: 10px;
     color: #FFF;
-    font-size: 1.2em;
+    font-size: 1em;
     text-shadow: 1px 1px 1px #000;
   }
   .banner__title p {
-    font-size: 0.8em;
+    font-size: 0.7em;
     padding-top: 20px;
   }
   .banner {
