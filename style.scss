@@ -3,6 +3,7 @@ $blue: rgb(38, 163, 204);
 $purple: rgb(157, 43, 180);
 $anthra: rgb(36, 36, 36);
 $lightpink: rgb(252, 184, 243);
+$bluenight: rgb(0, 23, 66);
 
 html, body {
     font-family: 'Open Sans', sans-serif;
@@ -21,10 +22,13 @@ a{ text-decoration: none; color: inherit;}
     justify-content: space-between;
     align-items: center;
     height: 180px;
+    margin-bottom: 30px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 
-    color: #000;
+    color: $lightpink;
 
-    background-color: #FFF;
+    background-color: $bluenight;
     &__logo img {
         width: 450px;
         height: 150px;

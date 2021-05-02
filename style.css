@@ -24,8 +24,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   height: 180px;
-  color: #000;
-  background-color: #FFF;
+  margin-bottom: 30px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #fcb8f3;
+  background-color: #001742;
 }
 
 .topbar__logo img {
