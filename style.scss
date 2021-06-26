@@ -11,8 +11,8 @@ html, body {
 }
 
 body {
-    max-width: 1750px;
-    margin: auto;
+    
+    margin: 0;
 }
 
 a{ text-decoration: none; color: inherit;}
@@ -22,9 +22,10 @@ a{ text-decoration: none; color: inherit;}
     justify-content: space-between;
     align-items: center;
     height: 180px;
+    margin-top: 40px;
     margin-bottom: 30px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    margin-left: 0;
+    margin-right: 0;
 
     color: $lightpink;
 
@@ -84,10 +85,16 @@ a{ text-decoration: none; color: inherit;}
     margin-left: 30px;
     color: #FFF;
     font-size: 2.2em;
-    text-shadow: 1px 1px 1px #000;
+    & h1 {
+        color: #FFF;
+        border: solid;
+        border-color: $blue $purple $purple $blue;
+        padding: 0 20px;
+    }
     & p {
         font-size: 0.8em;
         padding-top: 50px;
+        text-shadow: 1px 1px 1px #000;
     }
 }
 
@@ -98,11 +105,12 @@ h2.propos {
     margin-top: 100px;
     background-color: #FFF;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 70%;
     height: 460px;
-    box-shadow: 5px 5px 8px rgb(102, 180, 206);
+    box-shadow: 3px 3px 8px $anthra;
     border-radius: 10px;
+    padding-left: 10px;
 }
 
 .container {
@@ -140,9 +148,13 @@ h2.propos {
         color: #fff;
         text-shadow: 1px 1px 1px #000;
         border-radius: 10px;
-        background: linear-gradient($blue, $purple);
+        background: $blue;
         box-shadow: 2px 3px 3px black;
     }
+}
+
+.container__button.creneau {
+    background-color: $purple;
 }
 
 .container__image {
@@ -156,6 +168,14 @@ h2.propos {
     object-fit: cover;
     border-bottom-right-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.imageContact {
+    width: 425px;
+    height: 440px;
+    object-fit: cover;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .contact {
@@ -172,71 +192,17 @@ h2.propos {
 .container__network {
     width: 70%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 50px;
-    box-shadow: -5px -5px 8px  rgba(157, 43, 180, 0.363);
-    padding: 2px;
+    box-shadow: -3px -3px 8px $anthra;
+    padding: 10px;
     border-radius: 10px;
-    padding-bottom: 50px;
 }
-.socialNet {
+
+.contact_textAlign {
     display: flex;
-    justify-content: space-evenly;
-    padding-top: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-
-    &__circle {
-        width: 150px;
-        height: 150px;
-        border-radius: 100%;
-        box-shadow: 3px 3px 5px black;
-    }
-
-    & i {
-        position: relative;
-    }
-}
-
-.insta {
-    background-color: rgb(233, 233, 233);
-}
-
-.instaGram {
-    color: $purple;
-    top: 20px;
-    left: 27px;
-    font-size: 7em;
-
-}
-
-.snapchat {
-    background-color: rgb(207, 207, 35);
-}
-
-.snapChat {
-    color: white;
-    left: 36px;
-    top: -51px;
-    font-size: 5em;
-}
-
-.snapChat2 {
-    color:black;
-    left: 32px;
-    top: 32px;
-    font-size: 5.5em;
-}
-
-.facebook {
-    background-color:rgb(57, 99, 236);
-}
-
-.faceBook {
-    color: white;
-    top: 42px;
-    left: 75px;
-    font-size: 6em;
+    flex-direction: column;
 }
 
 footer {
@@ -248,9 +214,9 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: black;
-    width: 100%;
     height: 300px;
     padding: 20px;
+    z-index: 40;
 }
 
 .right-sideFoot {
@@ -262,13 +228,98 @@ footer {
     }
 }
 
+.alignRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-right: 5px;
+    font-size: 1.5em;
+}
+
 .blocFooter img {
     width: 400px;
     height: 250px;
+    z-index: 50;
 }
 
 .underline {
     text-decoration: underline;
+}
+
+[class*="revealL-"] {
+    opacity: 0;
+    transform: translateX(-60px);
+}
+
+.revealL-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(0.5, 0, 0, 0.7)
+}
+
+.revealL-1 {
+    transition: .4s;
+}
+
+.revealL-2 {
+    transition: .8s;
+}
+
+.revealL-3 {
+    transition: 1.2s;
+}
+
+.revealL-4 {
+    transition: 1.6s;
+}
+
+[class*="revealR-"] {
+    opacity: 0;
+    transform: translateX(60px);
+}
+
+.revealR-visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s cubic-bezier(0.5, 0, 0, 0.7)
+}
+
+.revealR-1 {
+    transition: .4s;
+}
+
+.revealR-2 {
+    transition: .8s;
+}
+
+.revealR-3 {
+    transition: 1.2s;
+}
+
+.revealR-4 {
+    transition: 1.6s;
+}
+
+[class*="revealN"] {
+    opacity: 0;
+}
+
+.revealN-visible {
+    opacity: 1;
+    transition: 1s cubic-bezier(0.5, 0, 0, 0.7);
+}
+
+.revealN-1 {
+    transition: .5s;
+}
+
+.revealN-2 {
+    transition: 3s;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
 }
 
 @media only screen and (max-width: 800px){
@@ -300,7 +351,7 @@ footer {
         font-size: 1em;
         text-shadow: 1px 1px 1px #000;
         & p {
-            font-size: 0.7em;
+            font-size: 0.9em;
             padding-top: 20px;
         }
     }
@@ -347,7 +398,7 @@ footer {
         display: flex;
         justify-content: center;
         text-align: center;
-        font-size: 0.8em;
+        font-size: 1em;
         margin-bottom: 15px;
     }
     &__button {
@@ -379,63 +430,7 @@ footer {
         border-radius: 10px;
         padding-bottom: 20px;
     }
-    .socialNet {
-        display: flex;
-        justify-content: space-evenly;
-        padding-top: 10px;
-        margin-top: 20px;
-        margin-bottom: 30px;
 
-        &__circle {
-            width: 60px;
-            height: 60px;
-        }
-
-        & i {
-            position: relative;
-        }
-    }
-
-    .insta {
-        background-color: rgb(233, 233, 233);
-    }
-
-    .instaGram {
-        color: $purple;
-        top: 14px;
-        left: 15px;
-        font-size: 2.2em;
-
-    }
-
-    .snapchat {
-        background-color: rgb(207, 207, 35);
-    }
-
-    .snapChat {
-        color: white;
-        left: 16px;
-        top: -20px;
-        font-size: 2em;
-    }
-
-    .snapChat2 {
-        color:black;
-        left: 14px;
-        top: 14px;
-        font-size: 2.2em;
-    }
-
-    .facebook {
-        background-color:rgb(57, 99, 236);
-    }
-
-    .faceBook {
-        color: white;
-        top: 20px;
-        left: 30px;
-        font-size: 2em;
-    }
 
     .blocFooter {
         display: flex;
@@ -462,5 +457,9 @@ footer {
     footer {
         font-size: 0.8em;
     }
+
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
 
 }
