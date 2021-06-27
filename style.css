@@ -207,15 +207,6 @@ h2.propos {
   border-top-right-radius: 10px;
 }
 
-.imageContact {
-  width: 425px;
-  height: 440px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
 .contact {
   margin-top: 40px;
 }
@@ -301,7 +292,7 @@ footer {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 10px;
-  margin-right: 5px;
+  margin-right: 15px;
   font-size: 1.5em;
 }
 
@@ -408,10 +399,9 @@ footer {
   top: 0;
 }
 
-@media only screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   body {
-    max-width: 800px;
-    margin: auto;
+    width: 100%;
   }
   .topbar__logo img {
     width: 150px;
@@ -457,17 +447,21 @@ footer {
   .container__image {
     display: none;
   }
+  .imageContact.imageContact {
+    width: 100%;
+    height: 240px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
   .container__propos {
     margin-top: 50px;
     background-color: #FFF;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
     width: 100%;
-    height: 330px;
     -webkit-box-shadow: 5px 5px 8px #66b4ce;
             box-shadow: 5px 5px 8px #66b4ce;
     border-radius: 10px;
@@ -503,7 +497,7 @@ footer {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    font-size: 1em;
+    font-size: 0.9em;
     margin-bottom: 15px;
   }
   .container__button {
@@ -526,7 +520,6 @@ footer {
     padding-bottom: 20px;
   }
   .container__network {
-    width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -534,12 +527,11 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 100%;
     margin-top: 20px;
     -webkit-box-shadow: -5px -5px 8px rgba(157, 43, 180, 0.363);
             box-shadow: -5px -5px 8px rgba(157, 43, 180, 0.363);
-    padding: 2px;
     border-radius: 10px;
-    padding-bottom: 20px;
   }
   .blocFooter {
     display: -webkit-box;
@@ -549,9 +541,7 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
     background-color: black;
-    width: 100%;
     height: 170px;
-    padding: 10px;
   }
   .right-sideFoot {
     display: -webkit-box;
@@ -571,6 +561,17 @@ footer {
   }
   footer {
     font-size: 0.8em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .imageContact {
+    width: 425px;
+    height: 440px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
