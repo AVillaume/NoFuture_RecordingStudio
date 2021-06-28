@@ -1,3 +1,50 @@
+/* RESET CSS */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input, select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img, video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
 html, body {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
@@ -93,7 +140,6 @@ a {
   padding: 20px 30px;
   margin-left: 30px;
   color: #FFF;
-  font-size: 2.2em;
 }
 
 .banner__title h1 {
@@ -101,10 +147,17 @@ a {
   border: solid;
   border-color: #26a3cc #9d2bb4 #9d2bb4 #26a3cc;
   padding: 0 20px;
+  font-size: 4em;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.banner__title h3 {
+  font-size: 2.2em;
 }
 
 .banner__title p {
-  font-size: 0.8em;
+  font-size: 1.8em;
   padding-top: 50px;
   text-shadow: 1px 1px 1px #000;
 }
@@ -203,8 +256,6 @@ h2.propos {
   height: 440px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-bottom-right-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 .contact {
@@ -297,9 +348,7 @@ footer {
 }
 
 .blocFooter img {
-  width: 400px;
   height: 250px;
-  z-index: 50;
 }
 
 .underline {
@@ -425,6 +474,12 @@ footer {
     font-size: 1em;
     text-shadow: 1px 1px 1px #000;
   }
+  .banner__title h1 {
+    font-size: 2em;
+  }
+  .banner__title h3 {
+    font-size: 1.5em;
+  }
   .banner__title p {
     font-size: 0.9em;
     padding-top: 20px;
@@ -444,9 +499,6 @@ footer {
   .banner__image {
     display: none;
   }
-  .container__image {
-    display: none;
-  }
   .imageContact.imageContact {
     width: 100%;
     height: 240px;
@@ -455,13 +507,26 @@ footer {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
+  .container__image img {
+    width: 100%;
+    height: 240px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
   .container__propos {
     margin-top: 50px;
     background-color: #FFF;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
+    height: auto;
     -webkit-box-shadow: 5px 5px 8px #66b4ce;
             box-shadow: 5px 5px 8px #66b4ce;
     border-radius: 10px;
@@ -537,6 +602,7 @@ footer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -564,6 +630,46 @@ footer {
   }
 }
 
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+  .menu a {
+    padding: 0 30px;
+  }
+  .banner img {
+    width: 40%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: right;
+       object-position: right;
+  }
+  .banner__block {
+    width: 60%;
+  }
+  .container__propos {
+    height: 380px;
+  }
+  .container__propos img {
+    height: 360px;
+  }
+  .container__title {
+    margin-top: 20px;
+    font-size: 1.8em;
+  }
+  .container__text {
+    font-size: 1em;
+  }
+  .container__network {
+    margin-top: 20px;
+    height: 380px;
+  }
+  .container__network img {
+    height: 360px;
+    margin-right: 10px;
+  }
+  .contact_textAlign {
+    padding: 10px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .imageContact {
     width: 425px;
@@ -572,6 +678,10 @@ footer {
        object-fit: cover;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
+  }
+  .container__image img {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
