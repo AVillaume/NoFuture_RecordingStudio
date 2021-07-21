@@ -1,15 +1,23 @@
-/*const menuElt = document.querySelector('.topbar');
+const btnModalServices = document.querySelector(".open_modal_services");
+const modalbg = document.querySelector(".modal__services");
+const closeBtn = document.querySelectorAll(".close_modal");
 
-(function () {
-var onScroll = function () {
-    if (menuElt.getBoundingClientRect().top < 0) {
-        menuElt.classList.add('fixed')
-    }
-}
-window.addEventListener('scroll', onScroll)
 
-})()*/
 
+btnModalServices.addEventListener("click", launchModal)
+
+
+function launchModal() {
+    modalbg.style.display = "flex";
+  }
+
+
+closeBtn.forEach((a) => a.addEventListener("click", closeModal));
+
+function closeModal() {
+    modalbg.style.display = "none";
+   }
+   
 const ratio = 0.3333
 const options = {
     root: null,

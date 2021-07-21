@@ -1,6 +1,6 @@
 /* RESET CSS *//////////////////////////////////////////
 
-html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+html,body,p,ol,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}button,input,select{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
 
 //////////////////////////////////
 
@@ -16,9 +16,17 @@ html, body {
     height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     
     margin: 0;
+}
+
+main {
+    margin: auto;
 }
 
 a{ text-decoration: none; color: inherit;}
@@ -118,7 +126,7 @@ h2.propos {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    height: 460px;
+    height: 660px;
     box-shadow: 3px 3px 8px $anthra;
     border-radius: 10px;
     padding-left: 10px;
@@ -140,6 +148,7 @@ h2.propos {
     &__text {
         display: flex;
         justify-content: center;
+        flex-direction: column;
         text-align: center;
         min-width: 300px;
         max-width: 800px;
@@ -174,9 +183,10 @@ h2.propos {
 
 .container__image img {
     display: flex;
-    width: 425px;
-    height: 440px;
+    width: 430px;
+    height: 640px;
     object-fit: cover;
+    align-items: center;
 }
 
 .contact {
@@ -204,6 +214,12 @@ h2.propos {
 .contact_textAlign {
     display: flex;
     flex-direction: column;
+}
+
+strong {
+    display: flex;
+    flex-direction: column;
+    color: $purple;
 }
 
 footer {
@@ -319,6 +335,68 @@ footer {
 .fixed {
     position: fixed;
     top: 0;
+}
+
+.fa-asterisk {
+    color: $pink;
+}
+
+.modal__services {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.modal_wrapper {
+    overflow: auto;
+    width: 800px;
+    max-width: calc(100vw - 20px);
+    max-height: calc(100vh - 20px);
+    background-color: #fff;
+    padding: 20px;
+    & h1 {
+        display: flex;
+        text-decoration: underline rgb(165, 159, 199);
+        text-shadow: 1px 1px 1px #000;
+        justify-content: center;
+        margin-bottom: 80px;
+        font-size: 3.3em;
+        color: #000;
+    }
+    & li.details {
+        color: #000;
+        margin-bottom: 40px;
+        font-size: 1.8em;
+    }
+    & .close_modal i {
+        position: absolute;
+        left: 0px;
+        padding: 50px;
+        font-size: 2.3em;
+        color: #FFF;
+    }
+}
+
+
+.services_list {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    list-style: circle inside;
+    margin-bottom: 10px;
+}
+
+.modal__block {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 800px){
@@ -474,6 +552,18 @@ footer {
 
 }
 
+.modal_wrapper {
+    & h1 {
+        font-size: 2.4em;
+    }
+    & li.details {
+        font-size: 1.5em;
+    }
+    & .close_modal i {
+        font-size: 2em;
+    }
+}
+
 @media screen and (min-width: 800px) and (max-width: 1100px) {
     .menu a {
         padding: 0 30px;
@@ -490,11 +580,11 @@ footer {
     }
 
     .container__propos {
-        height: 380px;
+        height: 460px;
     }
 
     .container__propos img {
-        height: 360px;
+        height: 440px;
     }
 
     .container {
@@ -505,7 +595,22 @@ footer {
 
         &__text {
             font-size: 1em;
-        }  
+        }
+        &__button {
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            font-size: 1.5em;
+            border: 0;
+            line-height: 2.5;
+            padding: 0 60px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+            border-radius: 10px;
+            background: $blue;
+            box-shadow: 2px 3px 3px black;
+        }
     }
 
     .container__network {

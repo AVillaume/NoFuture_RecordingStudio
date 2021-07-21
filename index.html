@@ -20,8 +20,8 @@
             <nav class="menu">
                 <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
                 <a href="#">Accueil</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="#Services">Services</a>
+                <a href="#Contact">Contact</a>
             </nav>
         </header>
         
@@ -37,42 +37,53 @@
                 <div class="banner__block"></div>
                 <img class="banner__image" src="images/panoramaNFRS.jpg" alt="No Future Recording Studio">
             </div>
-            <div class="container__propos revealL-2">
+            <div id="Services" class="container__propos revealL-2">
                 <div class="container">
                     <h2 class="container__title propos revealL-1">À propos</h2>
-                    <p class="container__text revealL-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, tempora numquam. Esse suscipit debitis officiis sapiente ducimus. Qui officia facilis natus!
-                    Praesentium nostrum, officiis culpa accusamus molestias natus voluptatum labore?</p>
-                <a class="container__button revealL-4" href="#"> Services</a>
+                    <p class="container__text revealL-3">Existant déjà depuis 2008, le studio d'enregistrement No Future ouvre enfin ses portes au grand public.
+                        Vous proposant toute une gamme de services adaptée à vos besoins quel que soit votre univers musical.<br/>Que ce soit vos premiers pas dans un studio
+                        ou que ce soit votre deuxième maison, que vous soyez de jeunes talents ou bien encore que vous soyez des artistes reconnus.<br/>
+                        No Future RC saura vous satisfaire en fonction de votre projet.
+                    </p>
+                <a class="container__button revealL-4 open_modal_services js-modal" href="#"> Services</a>
                 </div>
                 <div class="container__image">
                     <img class="revealL-2" src="images/infographieNF.jpg" alt="infographie Studio Musique No Future">
                 </div>
             </div>
+
+            <aside class="modal__services" aria-hidden="true" role="dialog" aria-labelledby="title_modal">
+                <div class="modal_wrapper">
+                    <a class="close_modal" href=""><i class="fas fa-times"></i></a>
+                    <div class="modal__block">
+                        <h1 id="title_modal" class="services_title"> Nos services</h1>
+                        <ul class="services_list">
+                            <li class="details">Enregistrement vocal et instruments</li>
+                            <li class="details">Mixage / Pré-Master</li>
+                            <li class="details">Visuel / Clip Vidéo</li>
+                            <li class="details">Mise en ligne des projets</li>
+                            <li class="details">Lancement sur les réseaux</li>
+                            <li class="details">Pack clé en main <i class="fas fa-asterisk"></i></li>
+                        </ul>
+                        <a class="container__button close_modal" href="#"> Fermer</a>
+                    </div>
+                </div>
+            </aside>
+
             <div class="container__align revealR-1">
-                <div class="container__network revealR-2">
+                <div id="Contact" class="container__network revealR-2">
                     <div class="imageContact">
                         <img class="imageContact" src="images/infographieNFContact.jpg" alt="">
                     </div>
                     <div class="contact_textAlign">
-                    <h2 class="container__title contact revealR-2">Contact</h2>
-                    <!--<div class="socialNet revealR-3">
-                        <a class="socialNet__circle insta revealR-2" href="#">
-                            <i class="fab fa-instagram instaGram"></i>                        
-                        </a>
-                        <a class="socialNet__circle snapchat revealR-3" href="#">
-                            <i class="fab fa-snapchat-ghost snapChat2"></i>
-                            <i class="fab fa-snapchat-ghost snapChat"></i>
-                        </a>
-                        <a class="socialNet__circle facebook revealR-4" href="#">
-                            <i class="fab fa-facebook-f faceBook"></i>
-                        </a>
-                    </div>-->
-                    <p class="container__text textContact revealR-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita dolor explicabo sunt id nobis, ipsam enim dolorem cum fugiat
-                    tenetur sequi molestiae praesentium vitae. Ducimus quibusdam ipsam officiis numquam error?</p>
-                    <a class="container__button creneau revealR-4" href="#"> Réserver un créneau</a>
+                        <h2 class="container__title contact revealR-2">Contact</h2>
+                        <p class="container__text textContact revealR-4">Un projet ? Un lancement ? Une simple curiosité ? N'hésitez pas à prendre contact dès maintenant.<br/>
+                            Vous pouvez également me contacter via les réseaux sociaux en lien en<br/> <a href="#lien_reseau"><strong>bas de page</strong></a></p>
+                        <a class="container__button creneau revealR-4 open_modal_contact" href="#"> Réserver un créneau</a>
                     </div>
                 </div>
             </div>
+            
 
         </main>
         <footer class="blocFooter">
@@ -87,7 +98,7 @@
             <div class="right-sideFoot">
                 <a href="#" class="underline revealR-3">Mentions légales</a>
                 <a href="#" class="underline revealR-4">Politique et Confidentialité</a>
-                <div class="alignRow">
+                <div id="lien_reseau" class="alignRow">
                     <a href=""><i class="fab fa-snapchat-ghost snapChat revealR-2"></i></a>
                     <a href=""><i class="fab fa-instagram instaGram revealR-3"></i> </a>
                     <a href=""><i class="fab fa-facebook-f faceBook revealN-2"></i></a>
