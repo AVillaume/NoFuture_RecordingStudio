@@ -45,14 +45,14 @@
                         ou que ce soit votre deuxième maison, que vous soyez de jeunes talents ou bien encore que vous soyez des artistes reconnus.<br/>
                         No Future RC saura vous satisfaire en fonction de votre projet.
                     </p>
-                <a class="container__button revealL-4 open_modal_services js-modal" href="#"> Services</a>
+                <a class="container__button revealL-4 open_modal" href="#modal1"> Services</a>
                 </div>
                 <div class="container__image">
                     <img class="revealL-2" src="images/infographieNF.jpg" alt="infographie Studio Musique No Future">
                 </div>
             </div>
 
-            <aside class="modal__services" aria-hidden="true" role="dialog" aria-labelledby="title_modal">
+            <aside id=modal1 class="modal__services" aria-hidden="true" role="dialog" aria-labelledby="title_modal">
                 <div class="modal_wrapper">
                     <a class="close_modal" href=""><i class="fas fa-times"></i></a>
                     <div class="modal__block">
@@ -63,9 +63,9 @@
                             <li class="details">Visuel / Clip Vidéo</li>
                             <li class="details">Mise en ligne des projets</li>
                             <li class="details">Lancement sur les réseaux</li>
-                            <li class="details">Pack clé en main <i class="fas fa-asterisk"></i></li>
+                            <li class="details">Pack clé en mains <i class="fas fa-asterisk"></i></li>
                         </ul>
-                        <a class="container__button close_modal" href="#"> Fermer</a>
+                        <a class="container__button close_modal" href=""> Fermer</a>
                     </div>
                 </div>
             </aside>
@@ -78,8 +78,90 @@
                     <div class="contact_textAlign">
                         <h2 class="container__title contact revealR-2">Contact</h2>
                         <p class="container__text textContact revealR-4">Un projet ? Un lancement ? Une simple curiosité ? N'hésitez pas à prendre contact dès maintenant.<br/>
+                            Situé à proximité de METZ, Moselle, je me tiens à votre disposition pour toute demande de renseignement.
                             Vous pouvez également me contacter via les réseaux sociaux en lien en<br/> <a href="#lien_reseau"><strong>bas de page</strong></a></p>
-                        <a class="container__button creneau revealR-4 open_modal_contact" href="#"> Réserver un créneau</a>
+                        <a class="container__button creneau revealR-4 open_modal" href="#modal2"> Réserver un créneau</a>
+                    </div>
+                </div>
+            </div>
+            <div id="modal2" class="bground-formContact" aria-hidden="true" role="form" aria-labelledby="title_modal">
+                <div class="content-formContact">
+                    <a class="close_modal" href=""><i class="fas fa-times"></i></a>
+                    <div class="modal__contact">
+                        <h1 id="title_modal" class="services_title"> Contact</h1>
+                        <p class="paragraph-contact">Besoin d'informations ? Posez votre question ici, en y laissant vos coordonnées. (Réponse sous 48 heures)</p>
+                        <form id="form" name="contact" action="index.html" method="POST">
+
+                            <div class="formData">
+                                <label for="pseudo">Pseudonyme</label><br>
+                                <div id="errorPseudo">Veuillez saisir un pseudonyme !</div>
+                                <input class="text-control" type="text" id="pseudo" name="pseudo" /><br>
+                            </div>
+                            <div
+                                class="formData">
+                                <label for="email">E-mail</label><br>
+                                <div id="errorMail">Veuillez saisir un email valide !</div>
+                                <input
+                                class="text-control"
+                                type="email"
+                                id="email"
+                                name="email"
+                                /><br>
+                            </div> 
+
+                            <p class="what-services">Pourquoi contacter No Future Recording Studio ?</p>
+                            
+                            <div class="checkbox-align">
+                                <div class="formData">
+                                    <input class="checkbox-input" type="checkbox" id="service1" name="service" value="Enregistrement vocal" />
+                                        <label class="checkbox-label" for="service1">
+                                        <span class="checkbox-icon"></span>
+                                        Enregistrement vocal</label>                             
+                                </div>
+
+                                <div class="formData">
+                                    <input class="checkbox-input" type="checkbox" id="service2" name="service" value="Enregistrement d'un ou plusieurs instruments" />
+                                        <label class="checkbox-label" for="service2">
+                                        <span class="checkbox-icon"></span>
+                                        Enregistrement d'instruments</label>                     
+                                </div>
+
+                                <div class="formData">
+                                    <input class="checkbox-input" type="checkbox" id="service3" name="service" value="Mixage et/ou Pré-Master" />
+                                        <label class="checkbox-label" for="service3">
+                                        <span class="checkbox-icon"></span>
+                                        Mixage et/ou Pré-Master</label>                         
+                                </div>
+
+                                <div class="formData">
+                                    <input class="checkbox-input" type="checkbox" id="service4" name="service" value="Visuel et/ou Clip Vidéo" />
+                                        <label class="checkbox-label" for="service4">
+                                        <span class="checkbox-icon"></span>
+                                        Visuel et/ou Clip Vidéo</label>                         
+                                </div>
+
+                                <div class="formData">
+                                    <input class="checkbox-input" type="checkbox" id="service5" name="service" value="Community Management" />
+                                        <label class="checkbox-label" for="service5">
+                                        <span class="checkbox-icon"></span>
+                                        Community Management</label>                         
+                                </div>
+
+                                <div class="formData">
+                                    <input class="checkbox-input" type="checkbox" id="service5" name="service" value="Questions" />
+                                        <label class="checkbox-label" for="service5">
+                                        <span class="checkbox-icon"></span>
+                                        Questions</label>                         
+                                </div>
+                                <div class="error">Vous devez cocher au moins une case !</div>
+                                <div class="formData">
+                                    <label class="textarea-question" for="question">Posez vos questions ici en essayant d'être le plus clair possible.</label>
+                                    <textarea class="question" id="question" name="question" required></textarea>
+                                </div>
+                                <div class="error">Veuillez préciser votre demande.</div>
+                            </div>
+                            <input class="container__button creneau" type="button" value="Envoyer" />
+                        </form>
                     </div>
                 </div>
             </div>

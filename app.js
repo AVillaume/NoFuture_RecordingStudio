@@ -1,23 +1,46 @@
-const btnModalServices = document.querySelector(".open_modal_services");
+let modal = null
+
+const btnModalServices = document.querySelectorAll(".open_modal");
 const modalbg = document.querySelector(".modal__services");
 const closeBtn = document.querySelectorAll(".close_modal");
 
+const openModal = function (e) {
+    e.preventDefault()
+    const target = document.querySelector(e.target.getAttribute('href'))
+    target.style.display = "flex";
+    target.removeAttribute('aria-hidden');
+    target.setAttribute('aria-modal', 'true');
 
+}
 
-btnModalServices.addEventListener("click", launchModal)
+const closeModal = function (e) {
+    e.preventDefault()
+    target.style.display = "none";
+    target.removeAttribute('aria-modal');
+    target.setAttribute('aria-hidden', 'true');
+}
+btnModalServices.forEach(a => {
+    a.addEventListener("click", openModal)
+})
 
-
-function launchModal() {
+/*
+function launchModal(e) {
+    e.preventDefault()
     modalbg.style.display = "flex";
+    modalbg.removeAttribute('aria-hidden');
+    modalbg.setAttribute('aria-modal', 'true');
   }
 
 
 closeBtn.forEach((a) => a.addEventListener("click", closeModal));
 
-function closeModal() {
+function closeModal(e) {
+    e.preventDefault()
     modalbg.style.display = "none";
+    modalbg.setAttribute('aria-hidden', 'true');
+    modalbg.removeAttribute('aria-modal');
    }
-   
+*/  
 const ratio = 0.3333
 const options = {
     root: null,

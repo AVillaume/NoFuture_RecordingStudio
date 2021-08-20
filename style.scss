@@ -11,14 +11,22 @@ $anthra: rgb(36, 36, 36);
 $lightpink: rgb(252, 184, 243);
 $bluenight: rgb(0, 23, 66);
 
+@keyframes modalopen {
+    from {
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+    to {
+      opacity: 1;
+    }
+}
+
 html, body {
     font-family: 'Open Sans', sans-serif;
     height: 100%;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
 body {
     
@@ -126,7 +134,7 @@ h2.propos {
     display: flex;
     justify-content: space-between;
     width: 70%;
-    height: 660px;
+    height: 530px;
     box-shadow: 3px 3px 8px $anthra;
     border-radius: 10px;
     padding-left: 10px;
@@ -138,7 +146,7 @@ h2.propos {
     &__title {
         display: flex;
         justify-content: center;
-        margin-top: 70px;
+        margin-top: 40px;
         margin-bottom: 35px;
         font-size: 2.5em;
         font-weight: 900;
@@ -153,7 +161,6 @@ h2.propos {
         min-width: 300px;
         max-width: 800px;
         font-size: 1.4em;
-        margin: auto;
         margin-bottom: 25px;
     }
     &__button {
@@ -178,13 +185,13 @@ h2.propos {
 }
 
 .container__image {
-    padding: 10px;
+    padding-top: 3px;
+    padding-right: 10px;
 }
 
 .container__image img {
     display: flex;
-    width: 430px;
-    height: 640px;
+    height: 526px;
     object-fit: cover;
     align-items: center;
 }
@@ -214,6 +221,10 @@ h2.propos {
 .contact_textAlign {
     display: flex;
     flex-direction: column;
+}
+
+.imageContact {
+    height: 480px;
 }
 
 strong {
@@ -340,8 +351,8 @@ footer {
 .fa-asterisk {
     color: $pink;
 }
-
-.modal__services {
+.modal__services, 
+.bground-formContact {
     display: none;
     align-items: center;
     justify-content: center;
@@ -354,7 +365,8 @@ footer {
     width: 100%;
     z-index: 1;
 }
-.modal_wrapper {
+
+.modal_wrapper, .content-formContact {
     overflow: auto;
     width: 800px;
     max-width: calc(100vw - 20px);
@@ -384,6 +396,69 @@ footer {
     }
 }
 
+input.container__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.paragraph-contact {
+    color: #000;
+    margin: 10px 100px;
+    font-style: italic;
+}
+
+.what-services {
+    color: #000;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+textarea.question {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 250px;
+}
+
+#title_modal {
+    margin-bottom: 50px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: normal;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    margin-left: 20px;
+    color: #000;
+    &.textarea-question {
+        margin-top: 20px;
+        font-size: 17px;
+        font-style: italic;
+    }
+}
+input {
+    padding: 8px;
+    border: 1px solid #000;
+    outline: none;
+}
+
+.checkbox-align {
+    margin-left: 40px;
+}
+
+.text-control {
+    margin-left: 20px;
+    padding: 8px;
+    width: 90%;
+    border-radius: 8px;
+    font-size: 20px;
+    height: 40px;
+}
 
 .services_list {
     display: flex;
@@ -397,6 +472,19 @@ footer {
     padding: 40px;
     display: flex;
     flex-direction: column;
+}
+
+#errorMail, #errorPseudo, #errorServices {
+    display: none;
+    color: red;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.error {
+    display: none;
+    color: red;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 800px){
@@ -464,6 +552,7 @@ footer {
         object-fit: cover;
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
+        padding-bottom: 10px;
     }
 
     .container__propos {
@@ -550,20 +639,48 @@ footer {
         font-size: 0.8em;
     }
 
-}
+    .modal_wrapper, .content-formContact {
+        & h1 {
+            font-size: 2.4em;
+        }
+        & li.details {
+            font-size: 1.5em;
+        }
+        & .close_modal i {
+            position: static;
+            font-size: 2em;
+            color: #000;
+            padding: 15px;
+        }
+    }
 
-.modal_wrapper {
-    & h1 {
-        font-size: 2.4em;
+    .paragraph-contact {
+        margin: 10px 10px;
     }
-    & li.details {
-        font-size: 1.5em;
+
+    .what-services {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        font-size: 16px;
     }
-    & .close_modal i {
-        font-size: 2em;
+
+    label {
+        font-size: 16px;
+        &.textarea-question {
+            margin-top: 15px;
+            font-size: 15px;
+        }
+    }
+
+    .text-control {
+        font-size: 15px;
+
+    }
+
+    .checkbox-align {
+        margin-left: 20px;
     }
 }
-
 @media screen and (min-width: 800px) and (max-width: 1100px) {
     .menu a {
         padding: 0 30px;
@@ -629,8 +746,6 @@ footer {
 
 @media screen and (min-width: 800px) {
     .imageContact{
-        width: 425px;
-        height: 440px;
         object-fit: cover;
         border-bottom-left-radius: 10px;
         border-top-left-radius: 10px;
